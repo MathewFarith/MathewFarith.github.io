@@ -133,12 +133,23 @@
         }
 
         .producto-imagen {
-            background: linear-gradient(145deg, #e2e8f0, #cbd5e1);
-            height: 200px;
+            background: #f1f5f9;
+            height: 220px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        .producto-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .producto-card:hover .producto-imagen img {
+            transform: scale(1.05);
         }
 
         .producto-info {
@@ -235,9 +246,11 @@
     </div>
 
     <div class="productos-grid" id="productosGrid">
-        <!-- OLLAS -->
+        <!-- OLLA NORMAL -->
         <div class="producto-card" data-nombre="Olla normal" data-precio="100">
-            <div class="producto-imagen">??</div>
+            <div class="producto-imagen">
+                <img src="https://images.pexels.com/photos/12775327/pexels-photo-12775327.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Olla de aluminio normal">
+            </div>
             <div class="producto-info">
                 <h3>?? Olla normal</h3>
                 <p>Material: Aluminio de alta calidad</p>
@@ -247,8 +260,11 @@
             </div>
         </div>
 
+        <!-- OLLA GRUESA -->
         <div class="producto-card" data-nombre="Olla gruesa" data-precio="200">
-            <div class="producto-imagen">??</div>
+            <div class="producto-imagen">
+                <img src="https://images.pexels.com/photos/4078649/pexels-photo-4078649.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Olla de aluminio gruesa">
+            </div>
             <div class="producto-info">
                 <h3>?? Olla gruesa</h3>
                 <p>Material: Aluminio de alta calidad</p>
@@ -258,8 +274,11 @@
             </div>
         </div>
 
+        <!-- OLLA GRANDE -->
         <div class="producto-card" data-nombre="Olla grande" data-precio="300">
-            <div class="producto-imagen">??</div>
+            <div class="producto-imagen">
+                <img src="https://images.pexels.com/photos/4106487/pexels-photo-4106487.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Olla grande de aluminio">
+            </div>
             <div class="producto-info">
                 <h3>?? Olla grande</h3>
                 <p>Material: Aluminio de alta calidad</p>
@@ -269,9 +288,11 @@
             </div>
         </div>
 
-        <!-- BAÑADORES DE ALUMINIO (agregados) -->
+        <!-- BAÑADOR PEQUEÑO -->
         <div class="producto-card" data-nombre="Bañador pequeño" data-precio="150">
-            <div class="producto-imagen">??</div>
+            <div class="producto-imagen">
+                <img src="https://images.pexels.com/photos/4140776/pexels-photo-4140776.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bañador de aluminio pequeño">
+            </div>
             <div class="producto-info">
                 <h3>?? Bañador pequeño</h3>
                 <p>Material: Aluminio reforzado</p>
@@ -281,8 +302,11 @@
             </div>
         </div>
 
+        <!-- BAÑADOR MEDIANO -->
         <div class="producto-card" data-nombre="Bañador mediano" data-precio="250">
-            <div class="producto-imagen">??</div>
+            <div class="producto-imagen">
+                <img src="https://images.pexels.com/photos/4140778/pexels-photo-4140778.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bañador de aluminio mediano">
+            </div>
             <div class="producto-info">
                 <h3>?? Bañador mediano</h3>
                 <p>Material: Aluminio reforzado</p>
@@ -292,8 +316,11 @@
             </div>
         </div>
 
+        <!-- BAÑADOR GRANDE -->
         <div class="producto-card" data-nombre="Bañador grande" data-precio="350">
-            <div class="producto-imagen">??</div>
+            <div class="producto-imagen">
+                <img src="https://images.pexels.com/photos/4140780/pexels-photo-4140780.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bañador de aluminio grande">
+            </div>
             <div class="producto-info">
                 <h3>?? Bañador grande</h3>
                 <p>Material: Aluminio reforzado</p>
