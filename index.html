@@ -3,33 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluminios Chef - Ollas y Ba�adores</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ollas de aluminio que ahorran gas | Antiadherentes y duraderas - Aluminios Chef</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+            color: #2d3436;
+            padding: 20px;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 0 30px 40px 30px;
+        }
+
+        /* Encabezado con gradiente */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            margin: -20px -30px 30px -30px;
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .header h1 span {
+            color: #ffc107;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,193,7,0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+            border: 1px solid rgba(255,193,7,0.5);
+        }
+
+        /* Botón catálogo */
+        .btn-catalogo {
+            display: inline-block;
+            background: #ffc107;
+            color: #1e3c72;
+            padding: 12px 28px;
+            margin-top: 20px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn-catalogo:hover {
+            background: #ffdd44;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Filtros */
+        .filtros {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .buscador input {
+            padding: 10px 15px;
+            width: 250px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        .ordenar select {
+            padding: 10px 15px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            background: white;
+        }
+
+        /* Grid de productos */
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Tarjeta de producto */
+        .producto-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #eef2f6;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            border-color: #ffc107;
+        }
+
+        .producto-imagen {
+            background: linear-gradient(145deg, #e2e8f0, #cbd5e1);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .producto-info {
+            padding: 20px;
+        }
+
+        .producto-info h3 {
+            font-size: 1.5rem;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .producto-info p {
+            color: #64748b;
+            margin: 5px 0;
+        }
+
+        .precio {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #e67e22;
+            margin: 15px 0;
+        }
+
+        .btn-comprar {
+            background: #1e3c72;
+            color: white;
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background: #ffc107;
+            color: #1e3c72;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 25px;
+            background: #1e293b;
+            color: white;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 15px 30px 15px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .filtros {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .buscador input {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- SECCI�N DE PRESENTACI�N -->
-    <header class="presentacion">
-        <h1>?? Aluminios Chef</h1>
+<div class="container">
+    <div class="header">
+        <h1>🍳 <span>Aluminios Chef</span></h1>
         <p>La mejor calidad en utensilios de cocina</p>
-        <p class="destacado">?? Especialistas en <strong>ollas de aluminio</strong> y <strong>ba�adores de aluminio</strong> ??</p>
-        <button id="btnCatalogo" class="btn-catalogo">?? VER CAT�LOGO</button>
-    </header>
+        <div class="badge">
+            ⭐ Especialistas en ollas de aluminio y bañadores de aluminio ⭐
+        </div>
+        <br>
+        <a href="#" class="btn-catalogo">📦 VER CATÁLOGO</a>
+    </div>
 
-    <!-- SECCI�N DEL CAT�LOGO (oculta al principio) -->
-    <section id="catalogo" class="catalogo oculto">
-        <h2>?? Nuestro Cat�logo</h2>
+    <div class="filtros">
+        <div class="buscador">
+            <input type="text" id="buscador" placeholder="🔍 Buscar producto... (ej: olla, baño)">
+        </div>
+        <div class="ordenar">
+            <label>💰 Ordenar por precio: </label>
+            <select id="ordenar">
+                <option value="default">Selecciona</option>
+                <option value="menor">Menor a mayor</option>
+                <option value="mayor">Mayor a menor</option>
+            </select>
+        </div>
+    </div>
 
-        <!-- BUSCADOR Y ORDENAR -->
-        <div class="filtros">
-            <input type="text" id="buscador" placeholder="?? Buscar producto... (ej: olla, ba�ador)">
-            <button id="btnOrdenarPrecio">?? Ordenar por precio (menor a mayor)</button>
+    <div class="productos-grid" id="productosGrid">
+        <!-- Producto 1 -->
+        <div class="producto-card" data-nombre="Olla normal" data-precio="100">
+            <div class="producto-imagen">🍲</div>
+            <div class="producto-info">
+                <h3>🍲 Olla normal</h3>
+                <p>Material: Aluminio de alta calidad</p>
+                <p>Tipo: Olla</p>
+                <div class="precio">€100</div>
+                <button class="btn-comprar">🛒 Comprar ahora</button>
+            </div>
         </div>
 
-        <!-- AQU� SE MOSTRAR�N LOS PRODUCTOS -->
-        <div id="listaProductos" class="productos-grid"></div>
-    </section>
+        <!-- Producto 2 -->
+        <div class="producto-card" data-nombre="Olla gruesa" data-precio="200">
+            <div class="producto-imagen">🥘</div>
+            <div class="producto-info">
+                <h3>🥘 Olla gruesa</h3>
+                <p>Material: Aluminio de alta calidad</p>
+                <p>Tipo: Olla</p>
+                <div class="precio">€200</div>
+                <button class="btn-comprar">🛒 Comprar ahora</button>
+            </div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Producto 3 -->
+        <div class="producto-card" data-nombre="Olla grande" data-precio="300">
+            <div class="producto-imagen">🍯</div>
+            <div class="producto-info">
+                <h3>🍯 Olla grande</h3>
+                <p>Material: Aluminio de alta calidad</p>
+                <p>Tipo: Olla</p>
+                <div class="precio">€300</div>
+                <button class="btn-comprar">🛒 Comprar ahora</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>✨ Aluminios Chef – Calidad que dura, precios que sorprenden ✨</p>
+        <p>© 2025 – Ollas de aluminio que ahorran gas y no se pegan</p>
+    </div>
+</div>
+
+<script>
+    // Funcionalidad de búsqueda y ordenamiento
+    const buscador = document.getElementById('buscador');
+    const ordenarSelect = document.getElementById('ordenar');
+    const productosGrid = document.getElementById('productosGrid');
+    let productos = Array.from(document.querySelectorAll('.producto-card'));
+
+    function filtrarYOrdenar() {
+        const termino = buscador.value.toLowerCase();
+        let productosFiltrados = productos.filter(producto => {
+            const nombre = producto.getAttribute('data-nombre').toLowerCase();
+            return nombre.includes(termino);
+        });
+
+        const orden = ordenarSelect.value;
+        if (orden === 'menor') {
+            productosFiltrados.sort((a, b) => parseInt(a.getAttribute('data-precio')) - parseInt(b.getAttribute('data-precio')));
+        } else if (orden === 'mayor') {
+            productosFiltrados.sort((a, b) => parseInt(b.getAttribute('data-precio')) - parseInt(a.getAttribute('data-precio')));
+        }
+
+        productosGrid.innerHTML = '';
+        productosFiltrados.forEach(producto => productosGrid.appendChild(producto));
+    }
+
+    buscador.addEventListener('input', filtrarYOrdenar);
+    ordenarSelect.addEventListener('change', filtrarYOrdenar);
+</script>
+
 </body>
 </html>
