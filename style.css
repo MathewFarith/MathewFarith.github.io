@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* ========== PRESENTACIÓN ========== */
+.presentacion {
+    background: linear-gradient(135deg, #c9e0ff 0%, #e0eafc 100%);
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 5px solid #ff9800;
+}
+
+.presentacion h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.presentacion p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.destacado {
+    font-size: 22px;
+    background-color: #ff9800;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    margin-top: 15px;
+}
+
+.btn-catalogo {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-catalogo:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* ========== CATÁLOGO ========== */
+.catalogo {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.catalogo h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Filtros (buscador y botón ordenar) */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+#buscador {
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+}
+
+#buscador:focus {
+    border-color: #ff5722;
+}
+
+#btnOrdenarPrecio {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btnOrdenarPrecio:hover {
+    background-color: #0b7dda;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta de cada producto */
+.producto-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.producto-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.producto-card p {
+    font-size: 18px;
+    color: #666;
+    margin: 8px 0;
+}
+
+.precio {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 15px 0;
+}
+
+.btn-comprar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #45a049;
+}
+
+/* Mensaje cuando no hay resultados */
+.sin-resultados {
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+    grid-column: 1 / -1;
+    padding: 50px;
+}
+
+/* Clase para ocultar secciones */
+.oculto {
+    display: none;
+}

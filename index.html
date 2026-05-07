@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluminios Chef - Ollas y Bañadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SECCIÓN DE PRESENTACIÓN -->
+    <header class="presentacion">
+        <h1>?? Aluminios Chef</h1>
+        <p>La mejor calidad en utensilios de cocina</p>
+        <p class="destacado">?? Especialistas en <strong>ollas de aluminio</strong> y <strong>bañadores de aluminio</strong> ??</p>
+        <button id="btnCatalogo" class="btn-catalogo">?? VER CATÁLOGO</button>
+    </header>
+
+    <!-- SECCIÓN DEL CATÁLOGO (oculta al principio) -->
+    <section id="catalogo" class="catalogo oculto">
+        <h2>?? Nuestro Catálogo</h2>
+
+        <!-- BUSCADOR Y ORDENAR -->
+        <div class="filtros">
+            <input type="text" id="buscador" placeholder="?? Buscar producto... (ej: olla, bañador)">
+            <button id="btnOrdenarPrecio">?? Ordenar por precio (menor a mayor)</button>
+        </div>
+
+        <!-- AQUÍ SE MOSTRARÁN LOS PRODUCTOS -->
+        <div id="listaProductos" class="productos-grid"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
