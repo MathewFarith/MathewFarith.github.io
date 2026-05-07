@@ -18,7 +18,6 @@
             padding: 20px;
         }
 
-        /* Contenedor principal */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -29,7 +28,6 @@
             padding: 0 30px 40px 30px;
         }
 
-        /* Encabezado con gradiente */
         .header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             margin: -20px -30px 30px -30px;
@@ -64,7 +62,6 @@
             border: 1px solid rgba(255,193,7,0.5);
         }
 
-        /* Bot√≥n cat√°logo */
         .btn-catalogo {
             display: inline-block;
             background: #ffc107;
@@ -85,7 +82,6 @@
             box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
 
-        /* Filtros */
         .filtros {
             background: #f8f9fa;
             padding: 20px;
@@ -114,7 +110,6 @@
             background: white;
         }
 
-        /* Grid de productos */
         .productos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -122,7 +117,6 @@
             margin-top: 20px;
         }
 
-        /* Tarjeta de producto */
         .producto-card {
             background: white;
             border-radius: 24px;
@@ -187,7 +181,6 @@
             color: #1e3c72;
         }
 
-        /* Footer */
         .footer {
             margin-top: 50px;
             text-align: center;
@@ -218,21 +211,21 @@
 
 <div class="container">
     <div class="header">
-        <h1>üç≥ <span>Aluminios Chef</span></h1>
+        <h1>?? <span>Aluminios Chef</span></h1>
         <p>La mejor calidad en utensilios de cocina</p>
         <div class="badge">
-            ‚≠ê Especialistas en ollas de aluminio y ba√±adores de aluminio ‚≠ê
+            ? Especialistas en ollas de aluminio y baÒadores de aluminio ?
         </div>
         <br>
-        <a href="#" class="btn-catalogo">üì¶ VER CAT√ÅLOGO</a>
+        <a href="#" class="btn-catalogo">?? VER CAT¡LOGO</a>
     </div>
 
     <div class="filtros">
         <div class="buscador">
-            <input type="text" id="buscador" placeholder="üîç Buscar producto... (ej: olla, ba√±o)">
+            <input type="text" id="buscador" placeholder="?? Buscar producto... (ej: olla, baÒo)">
         </div>
         <div class="ordenar">
-            <label>üí∞ Ordenar por precio: </label>
+            <label>?? Ordenar por precio: </label>
             <select id="ordenar">
                 <option value="default">Selecciona</option>
                 <option value="menor">Menor a mayor</option>
@@ -242,51 +235,82 @@
     </div>
 
     <div class="productos-grid" id="productosGrid">
-        <!-- Producto 1 -->
+        <!-- OLLAS -->
         <div class="producto-card" data-nombre="Olla normal" data-precio="100">
-            <div class="producto-imagen">üç≤</div>
+            <div class="producto-imagen">??</div>
             <div class="producto-info">
-                <h3>üç≤ Olla normal</h3>
+                <h3>?? Olla normal</h3>
                 <p>Material: Aluminio de alta calidad</p>
                 <p>Tipo: Olla</p>
-                <div class="precio">‚Ç¨100</div>
-                <button class="btn-comprar">üõí Comprar ahora</button>
+                <div class="precio">Ä100</div>
+                <button class="btn-comprar">?? Comprar ahora</button>
             </div>
         </div>
 
-        <!-- Producto 2 -->
         <div class="producto-card" data-nombre="Olla gruesa" data-precio="200">
-            <div class="producto-imagen">ü•ò</div>
+            <div class="producto-imagen">??</div>
             <div class="producto-info">
-                <h3>ü•ò Olla gruesa</h3>
+                <h3>?? Olla gruesa</h3>
                 <p>Material: Aluminio de alta calidad</p>
                 <p>Tipo: Olla</p>
-                <div class="precio">‚Ç¨200</div>
-                <button class="btn-comprar">üõí Comprar ahora</button>
+                <div class="precio">Ä200</div>
+                <button class="btn-comprar">?? Comprar ahora</button>
             </div>
         </div>
 
-        <!-- Producto 3 -->
         <div class="producto-card" data-nombre="Olla grande" data-precio="300">
-            <div class="producto-imagen">üçØ</div>
+            <div class="producto-imagen">??</div>
             <div class="producto-info">
-                <h3>üçØ Olla grande</h3>
+                <h3>?? Olla grande</h3>
                 <p>Material: Aluminio de alta calidad</p>
                 <p>Tipo: Olla</p>
-                <div class="precio">‚Ç¨300</div>
-                <button class="btn-comprar">üõí Comprar ahora</button>
+                <div class="precio">Ä300</div>
+                <button class="btn-comprar">?? Comprar ahora</button>
+            </div>
+        </div>
+
+        <!-- BA—ADORES DE ALUMINIO (agregados) -->
+        <div class="producto-card" data-nombre="BaÒador pequeÒo" data-precio="150">
+            <div class="producto-imagen">??</div>
+            <div class="producto-info">
+                <h3>?? BaÒador pequeÒo</h3>
+                <p>Material: Aluminio reforzado</p>
+                <p>Tipo: BaÒador</p>
+                <div class="precio">Ä150</div>
+                <button class="btn-comprar">?? Comprar ahora</button>
+            </div>
+        </div>
+
+        <div class="producto-card" data-nombre="BaÒador mediano" data-precio="250">
+            <div class="producto-imagen">??</div>
+            <div class="producto-info">
+                <h3>?? BaÒador mediano</h3>
+                <p>Material: Aluminio reforzado</p>
+                <p>Tipo: BaÒador</p>
+                <div class="precio">Ä250</div>
+                <button class="btn-comprar">?? Comprar ahora</button>
+            </div>
+        </div>
+
+        <div class="producto-card" data-nombre="BaÒador grande" data-precio="350">
+            <div class="producto-imagen">??</div>
+            <div class="producto-info">
+                <h3>?? BaÒador grande</h3>
+                <p>Material: Aluminio reforzado</p>
+                <p>Tipo: BaÒador</p>
+                <div class="precio">Ä350</div>
+                <button class="btn-comprar">?? Comprar ahora</button>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>‚ú® Aluminios Chef ‚Äì Calidad que dura, precios que sorprenden ‚ú®</p>
-        <p>¬© 2025 ‚Äì Ollas de aluminio que ahorran gas y no se pegan</p>
+        <p>? Aluminios Chef ñ Calidad que dura, precios que sorprenden ?</p>
+        <p>© 2025 ñ Ollas y baÒadores de aluminio que ahorran gas y no se pegan</p>
     </div>
 </div>
 
 <script>
-    // Funcionalidad de b√∫squeda y ordenamiento
     const buscador = document.getElementById('buscador');
     const ordenarSelect = document.getElementById('ordenar');
     const productosGrid = document.getElementById('productosGrid');
